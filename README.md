@@ -12,18 +12,18 @@ https://developer.atlassian.com/display/DOCS/Install+the+Atlassian+SDK+on+a+Linu
 
 2. Setup Eclipse project (optional):
 
-2.1. https://developer.atlassian.com/display/DOCS/Set+Up+the+Eclipse+IDE+for+Linux
+* https://developer.atlassian.com/display/DOCS/Set+Up+the+Eclipse+IDE+for+Linux
 
-2.2. Generate Eclipse files on the plugin project
+* Generate Eclipse files on the plugin project
 
-atlas-mvn eclipse:eclipse
+    atlas-mvn eclipse:eclipse
 
-2.3. Import the project on your Eclipse IDE
+* Import the project on your Eclipse IDE
 
 3. Package jar file
 
-atlas-clean
-atlas-package
+    atlas-clean
+    atlas-package
 
 jar files are generated into the ./target directory
 
