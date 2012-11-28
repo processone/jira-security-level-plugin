@@ -6,26 +6,25 @@ This is a JIRA plugin to automatically set security level based on group of the 
 installation
 ============
 
-1. Download and install Atlassian SDK (it includes a custom apache-maven manager):
+1.  Download and install Atlassian SDK (it includes a custom apache-maven manager)
 
-https://developer.atlassian.com/display/DOCS/Install+the+Atlassian+SDK+on+a+Linux+or+Mac+System#InstalltheAtlassianSDKonaLinuxorMacSystem-Step1:DownloadandInstalltheSDK
+    * [SDK installation](https://developer.atlassian.com/display/DOCS/Install+the+Atlassian+SDK+on+a+Linux+or+Mac+System#InstalltheAtlassianSDKonaLinuxorMacSystem-Step1:DownloadandInstalltheSDK)
 
-2. Setup Eclipse project (optional):
+2.  Setup Eclipse project (optional)
 
-* https://developer.atlassian.com/display/DOCS/Set+Up+the+Eclipse+IDE+for+Linux
+    * [Instructions](https://developer.atlassian.com/display/DOCS/Set+Up+the+Eclipse+IDE+for+Linux)
 
-* Generate Eclipse files on the plugin project
+    * Generate Eclipse files on the plugin project
 
-    atlas-mvn eclipse:eclipse
+            atlas-mvn eclipse:eclipse
 
-* Import the project on your Eclipse IDE
+    * Import the project on your Eclipse IDE
+3.  Package jar file
 
-3. Package jar file
+        atlas-clean
+        atlas-package
 
-    atlas-clean
-    atlas-package
-
-jar files are generated into the ./target directory
+    jar files are generated into the ./target directory
 
 Here are the SDK commands you'll use immediately:
 
@@ -37,7 +36,5 @@ Here are the SDK commands you'll use immediately:
                   - 'pi' reinstalls the plugin into the running product instance
 * atlas-help    -- prints description for all commands in the SDK
 
-Full documentation is always available at:
-
-https://developer.atlassian.com/display/DOCS/Developing+with+the+Atlassian+Plugin+SDK
+[Full documentation of Atlassian SDK](https://developer.atlassian.com/display/DOCS/Developing+with+the+Atlassian+Plugin+SDK)
 
