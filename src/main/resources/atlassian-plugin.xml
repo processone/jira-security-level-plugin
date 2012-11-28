@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atlassian-plugin key="securitylevel.jira.plugin.postfunction" name="Set Issue Security Level From Group">
+    <plugin-info>
+        <description>Set the issue security level to reflect the group the user who created it is in.</description>
+        <version>1.0</version>
+        <application-version min="5.0" max="5.2"/>
+        <vendor name="Process One" url="http://process-one.net"/>
+    </plugin-info>
+
+    <workflow-function key="set-security-level-function" name="Set the issue security level" class="com.atlassian.jira.plugin.workflow.WorkflowNoInputPluginFactory">
+        <description>Set the issue security level based on user's specified group</description>
+        <function-class>securitylevel.jira.plugin.postfunction.SetSecurityLevelFunction</function-class>
+        <orderable>true</orderable>
+        <unique>true</unique>
+        <deletable>true</deletable>
+        <weight>900</weight>
+        <default>false</default>
+        <resource type="velocity" name="view" location="templates/set-security-level-function-view.vm"/>
+    </workflow-function>
+
+</atlassian-plugin>
