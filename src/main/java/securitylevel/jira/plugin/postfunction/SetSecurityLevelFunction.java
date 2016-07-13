@@ -1,6 +1,6 @@
 package securitylevel.jira.plugin.postfunction;
 
-import com.atlassian.crowd.embedded.api.User;
+import com.atlassian.jira.user.ApplicationUser;
 import com.atlassian.jira.component.ComponentAccessor;
 import com.atlassian.jira.issue.IssueManager;
 import com.atlassian.jira.issue.MutableIssue;
@@ -27,7 +27,7 @@ public class SetSecurityLevelFunction implements FunctionProvider {
 	public void execute(Map transientVars, Map args, PropertySet ps) {
 
 		MutableIssue issue = (MutableIssue) transientVars.get("issue");
-		User reporter = issue.getReporterUser();
+		ApplicationUser reporter = issue.getReporterUser();
 		Collection<String> reporterGroups = groupManager
 				.getGroupNamesForUser(reporter.getName());
 
@@ -60,7 +60,7 @@ public class SetSecurityLevelFunction implements FunctionProvider {
 	private void saveIssue(MutableIssue issue) {
 		
 		IssueManager issueManager = ComponentAccessor.getIssueManager();
-		User user = ComponentAccessor.getJiraAuthenticationContext().getLoggedInUser();
+		ApplicationUser user = ComponentAccessor.getJiraAuthenticationContext().getUser();
 		boolean sendEmail = false;
 		
 		issueManager.updateIssue(user, issue, EventDispatchOption.DO_NOT_DISPATCH, sendEmail);
