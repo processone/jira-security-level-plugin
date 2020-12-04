@@ -3,7 +3,7 @@
     <plugin-info>
         <description>Set the issue security level to reflect the group the user who created it is in.</description>
         <version>1.0</version>
-        <application-version min="5.0" max="5.2"/>
+        <application-version min="5.1" max="7.1"/>
         <vendor name="Process One" url="http://process-one.net"/>
     </plugin-info>
 
